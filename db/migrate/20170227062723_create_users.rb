@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
 
     t.column "first_name", :string , :limit => 25
     t.string "last_name", :limit => 25
-    t.string  "email", :default => '' :null => false
+    t.string  "email", :default => '' ,:null => false
     t.string "password", :limit => 50
 
   t.timestamps
@@ -14,6 +14,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
     end
   end
   def down
-
+drop_table :users
   end
 end
